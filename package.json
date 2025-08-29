@@ -1,0 +1,34 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioArroyo16/festival-de-musica.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP"
+  ],
+  "author": "Sergio Arroyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioArroyo16/festival-de-musica/issues"
+  },
+  "homepage": "https://github.com/SergioArroyo16/festival-de-musica#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.90.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

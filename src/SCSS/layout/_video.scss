@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color";
+
+.video{
+    position: relative;     //Al contenedor se le aplica relative y el contenido absolute
+    min-height: 30rem;  //Se le proporcionará el alto min y máx del video dependiendo del dispositivo con el que se viasualice
+    max-height: 70rem;
+    overflow: hidden;       //El overflow ayudará a que el video fuera del overlay se oculte.
+    .overlay{
+        position: absolute;
+        background: linear-gradient(
+            270deg,     /*Tendrá una inclinación de 270° el degradado*/
+            rgba(v.$morado, 60%), /*rgba(color, intensidad del color en porcentaje)*/ 
+            rgba( color.scale(v.$morado, $lightness: -20%), 90%) /*color.scale(color, la cantidad de luz)*/
+        );
+        inset: 0; //Inset se refiere a la posición del overley sobre el contenedor, pero al colocar 0, ocupará todo el espacio.
+
+        //Centrar verticalmente las letras del overlay
+        display: flex;
+        align-items: center;
+    }
+
+    video{
+        display: block; //Ayuda a eliminar una pequeña franja de espacio en la parte inferior del video
+        width: auto;
+        @include m.desktop{
+            width: 100%;
+        }
+    }
+}
+
+.contenido-video{
+
+    z-index: 10;        //Controla la profundidad de un elemento y nos ayudará en colocar el h2 y el p encima del overlay y así poder seleccionar el texto con el mouse
+
+    h2{
+        color: v.$blanco;
+        margin: 0;
+        font-size: 7rem;
+    }
+    p{
+        display: inline-block; //A un display inline-block se le puede aplicar Margin
+        margin: 1rem; //Se le aplica margin para separar el h2 con el p
+        background-color: v.$rosa;
+        padding: 1rem 2rem;
+        font-size: 2.4rem;
+        color: v.$blanco;
+        font-weight: 700;
+
+        
+    }
+}
