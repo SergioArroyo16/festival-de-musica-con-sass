@@ -31,7 +31,7 @@
 
 .navegacion-principal {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-direction: column;
     align-items: center;
     @include m.tablet{

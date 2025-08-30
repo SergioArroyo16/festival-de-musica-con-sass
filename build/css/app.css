@@ -428,7 +428,7 @@ body > section {
 
 .navegacion-principal {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
 }
@@ -484,4 +484,50 @@ body > section {
   font-size: 2.4rem;
   color: #FFFFFF;
   font-weight: 700;
+}
+
+.sobre-festival {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  margin-top: 5rem;
+}
+@media (min-width: 1200px) {
+  .contenido-festival {
+    margin-top: 1rem;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contenido-festival h2 {
+    text-align: left;
+  }
+}
+.contenido-festival .fecha {
+  color: #4CB8B3;
+  font-weight: 700;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contenido-festival .fecha {
+    text-align: left;
+  }
+}
+.contenido-festival .contenido-festival__texto {
+  text-align: justify;
 }

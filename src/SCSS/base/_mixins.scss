@@ -23,3 +23,24 @@
         @content;
     }
 }
+
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@mixin grid($columnas, $gap : 5rem) {
+    //Los ':' en el parámetro significa que si no se agrega ningún valor en el argumento tomará el dato después de los ':'
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
+@mixin alineacion-texto {
+    text-align: center;
+
+    @include tablet {
+        text-align: left;
+    }
+}
